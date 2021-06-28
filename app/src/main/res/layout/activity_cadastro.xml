@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.imc.CadastroActivity">
+
+    <Button
+        android:id="@+id/voltar"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLength="30"
+        app:layout_constraintStart_toEndOf="@+id/textView0"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/idade"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView0"
+        app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="40dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Idade:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeTextView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="42dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:text="Altura:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idade" />
+
+    <EditText
+        android:id="@+id/altura"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/idade" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Peso:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/peso"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/altura" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="316dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peso">
+
+        <RadioButton
+            android:id="@+id/femRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteY="335dp" />
+
+        <RadioButton
+            android:id="@+id/mascRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="335dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calcularButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/imcTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcularButton" />
+
+    <TextView
+        android:id="@+id/nomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="88dp"
+        android:text="Nome:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="185dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="28dp"
+        android:text="Cadastro de Aluno(a)"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
